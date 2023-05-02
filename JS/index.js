@@ -8,70 +8,57 @@ function createMarkup(markup_name, text, parent, attribute) {
     return markup;
 }
 
+const container = document.getElementById("container");
 /* create the nav balise at the top */
-const header = document.createElement('header');
-document.body.appendChild(header);
+const header = createMarkup('header', '',container);
 const nav = createMarkup('nav', '', header);
-
 /* create the section where the cards will be displayed */
-const main = document.createElement('main');
-document.body.appendChild(main);
-const cardsection = createMarkup('section', '',main);
+const cardsection = createMarkup('section', '',container);
 
-/*create the buttons inside the nav balise */
-/*const subjectlist = ["Tous", "HTML", "CSS", "JS"];
-let btntxt = "";
-for (let i in subjectlist) {
-    btntxt = subjectlist [i];
-    const button = createMarkup('button', btntxt, nav,[{name:"class", value:"nav-button"}]);
-}*/
 const btnAll = createMarkup('button', "Tous", nav, [{name:"class", value:"btn-All"}]);
 const btnHTML = createMarkup('button', "HTML", nav, [{name:"class", value:"btn-HTML"}]);
 const btnCSS = createMarkup('button', "CSS", nav, [{name:"class", value:"btn-CSS"}]);
 const btnJS = createMarkup('button', "JS", nav, [{name:"class", value:"btn-JS"}]);
 
-
-/********************************************* */
-/******************************************** */
-/******************************************** */
 /* create the 16 cards */
 
-let card = createMarkup('article',`article sur le JS`, cardsection, [{name: "class", value: "art-JS"}]);
-let cardtext = createMarkup('p',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
-//const article_html = createMarkup("article", "", section, [
-//    { name: "class", value: "article html" },
-//  ]);
-//let article_title = createMarkup("h2", "Article sur le HTML", article_html);
-//let article_p = createMarkup("p", "", article_html);
+let card = createMarkup('article',`HTML0article HTML`, cardsection,[{name: "class", value: "article html"},]);
+let cardtext = createMarkup('p',"HTML-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup("article","HTML1-article sur les HTML", cardsection,[{name: "class", value: "article html"},]);
+cardtext = createMarkup('p',"HTML-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup("article","HTML2-article sur les HTML", cardsection,[{name: "class", value: "article html"},]);
+cardtext = createMarkup('p',"HTML-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup("article","HTML3-article sur les HTML", cardsection,[{name: "class", value: "html"},]);
+cardtext = createMarkup('p',"HTML-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`HTML4-article HTML`, cardsection,[{name: "class", value: "html"},]);
+cardtext = createMarkup('p',"HTML-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`HTML5-article HTML`, cardsection,[{name: "class", value: "html"},]);
+cardtext = createMarkup('p',"HTML-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`HTML6-article HTML`, cardsection,[{name: "class", value: "html"},]);
+cardtext = createMarkup('p',"HTML-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
 
-const article_html = createMarkup("article", "", cardsection, [
-    { name: "class", value: "article html" },
-  ]);
-let article_title = createMarkup("h2", "Article sur le HTML", article_html);
-let article_p = createMarkup("p", "", article_html);
+card = createMarkup('article',`CSS1-article CSS`, cardsection,[{name: "class", value: "css"},]);
+cardtext = createMarkup('p',"CSS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`CSS2-article CSS`, cardsection,[{name: "class", value: "css"},]);
+cardtext = createMarkup('p',"CSS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`CSS3-article CSS`, cardsection,[{name: "class", value: "css"},]);
+cardtext = createMarkup('p',"CSS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`CSS4-article CSS`, cardsection,[{name: "class", value: "css"},]);
+cardtext = createMarkup('p',"CSS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
 
-card = createMarkup('article',`article sur les HTML`, cardsection,[{name: "class", value: "art-HTML"},]);
-cardtext = createMarkup('p',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
-//card = createMarkup('article',`article sur les HTML`, cardsection,[{name: "class", value: "articleart-HTML"},]);
-//cardtext = createMarkup('p',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
-card = createMarkup('article',`article sur les HTML`, cardsection,[{name: "class", value: "article art-HTML"},]);
-cardtext = createMarkup('p',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
-card = createMarkup('article',`article sur les CSS`, cardsection,[{name: "class", value: "article art-CSS"},]);
-cardtext = createMarkup('p',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
-card = createMarkup('article',`article sur le JS`, cardsection,[{name: "class", value: "article art-JS"},]);
-cardtext = createMarkup('p',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
-card = createMarkup('article',`article2 sur le JS`, cardsection,[{name: "class", value: "art-JS"},]);
-cardtext = createMarkup('p',"Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
-
-/* function test - a supprimer  */
-function articleHtml() {
-    const article_html = createMarkup("article", "", section, [
-      { name: "class", value: "article html" },
-    ]);
-    let article_title = createMarkup("h2", "Article sur le HTML", article_html);
-    let article_p = createMarkup("p", "", article_html);
-  }
-
+card = createMarkup('article',`JS1-article sur le JS`, cardsection,[{name: "class", value: "js"},]);
+cardtext = createMarkup('p',"JS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`JS2-article sur le JS`, cardsection,[{name: "class", value: "js"},]);
+cardtext = createMarkup('p',"JS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`JS3-article sur le JS`, cardsection, [{name: "class", value: "js"}]);
+cardtext = createMarkup('p',"JS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`JS4-article sur le JS`, cardsection, [{name: "class", value: "js"}]);
+cardtext = createMarkup('p',"JS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+card = createMarkup('article',`JS5-article sur le JS`, cardsection, [{name: "class", value: "js"}]);
+cardtext = createMarkup('p',"JS-Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo laborum quasi...", card);
+//const data_article = createMarkup("article", "", container, [{ name: "class", value: `html` },]);
+//let articleTitle = createMarkup("h2", "10-article sur HTML", data_article); 
+//let articleData1 = createMarkup("p", `lorem ipsum`, data_article);
 
 /* event click on nav buttons */
 btnAll.onclick = manageBtnAllClick;
@@ -79,56 +66,59 @@ btnHTML.onclick = manageBtnHTMLClick;
 btnCSS.onclick = manageBtnCSSClick;
 btnJS.onclick = manageBtnJSClick;
 
+
 function hideAll () {
     const cards= document.querySelectorAll("article");
+    console.log(cards.length);
     cards.forEach((card) => {
         card.hidden = true;
     }); 
 }
 
-function ShowAll () {
+function showAll () {
     const cards= document.querySelectorAll("article");
+    console.log(cards.length);
     cards.forEach((card) => {
         card.hidden = false;
     }); 
 }
-function ShowHTML () {
-    const cards= document.querySelectorAll("article.art-HTML");
+function showHTML () {
+    const cards = document.querySelectorAll("html");
+    console.log(cards.length);
     cards.forEach((card) => {
         card.hidden = false;
     }); 
 }
-function ShowCSS () {
+function showCSS () {
     const cards= document.querySelectorAll("article.art-CSS");
+    console.log(cards.length);
     cards.forEach((card) => {
         card.hidden = false;
     }); 
 }
-function ShowJS () {
+function showJS () {
     const cards= document.querySelectorAll("article.art-JS");
+    console.log(cards.length);
     cards.forEach((card) => {
         card.hidden = false;
     }); 
 }
 
 function manageBtnAllClick(event) {
-  console.log(`clic sur le bouton Tous`);
-  ShowAll();
+    console.log(`clic sur le bouton Tous`);
+    showAll();
 }
 function manageBtnHTMLClick(event) {
     console.log(`clic sur le bouton HTML`);
     hideAll();
-    ShowHTML();
+    showHTML();
 }
 function manageBtnCSSClick(event) {
     console.log(`clic sur le bouton CSS`);
     hideAll();
-    ShowCSS();
-    //ShowAll();
+    showCSS();
 }
 function manageBtnJSClick(event) {
     console.log(`clic sur le bouton JS`);
-    hideAll();
-    ShowJS();
-    ShowAll();
+    showJS();
 }

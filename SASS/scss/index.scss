@@ -1,4 +1,4 @@
-/* header {
+header {
     width: 100%;
     margin: 0 auto;
     line-height: 2 ;
@@ -8,9 +8,9 @@
         gap: 20px;
         display: flex;        
         justify-content: center; 
-        //a {
-        //   @include nav-button(white,green);
-        //}
+        a {
+           @include nav-button(white,green);
+        }
     }
 }
 
@@ -23,7 +23,7 @@
     border-radius: 5px;
     margin: 20px;
     padding: 15px 30px;
-} */
+}
 
 .article{
     border: 1px solid green;
